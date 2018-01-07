@@ -139,8 +139,10 @@
 -define:UNITY_EDITOR_OSX
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
-'Assets/DestroyByContact.cs'
 'Assets/Scipts/DestroyByBoundary.cs'
+'Assets/Scipts/DestroyByContact.cs'
+'Assets/Scipts/DestroyByTime.cs'
+'Assets/Scipts/GameController.cs'
 'Assets/Scipts/Mover.cs'
 'Assets/Scipts/PlayerController.cs'
 'Assets/Scipts/RandomRotator.cs'

@@ -139,8 +139,11 @@
 -define:UNITY_EDITOR_OSX
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
+'Assets/Scipts/DestroyByBoundary.cs'
+'Assets/Scipts/DestroyByContact.cs'
 'Assets/Scipts/Mover.cs'
 'Assets/Scipts/PlayerController.cs'
+'Assets/Scipts/RandomRotator.cs'
 'Assets/TutorialInfo/Scripts/Readme.cs'
 -r:'/Volumes/Storage/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Volumes/Storage/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Xml.Linq.dll'
