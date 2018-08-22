@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     public float spawnWait;
     public float startWait;
     public float waveWait;
+    
     public Text scoreText;
     public int score;
     
