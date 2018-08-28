@@ -14,10 +14,12 @@ public class GameController : MonoBehaviour
     public Text scoreText;
     public Text restartText;
     public Text gameOverText;
+	public Text waveCountText;
 
     private bool gameOver;
     private bool restart;
     private int score;
+	public int waveCount;
     
     void Start ()
     {
@@ -42,13 +44,18 @@ public class GameController : MonoBehaviour
     IEnumerator SpawnWaves ()
     {
         yield return new WaitForSeconds (startWait);
+
         while (true) {
             for (int i = 0; i < hazardCount; i++) {
                 Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
                 Quaternion spawnRotation = Quaternion.identity;
                 Instantiate (hazard, spawnPosition, spawnRotation);
                 yield return new WaitForSeconds (spawnWait);
+
+
             }
+			waveCount++;
+			waveCountText.text = "Waves Survived: " + waveCount;
             yield return new WaitForSeconds (waveWait);
 
             if(gameOver) {
@@ -72,4 +79,9 @@ public class GameController : MonoBehaviour
         gameOver = true;
 
     }
+
+	public int shipsRemaining(){
+		return GameObject.Find ("Players").transform.childCount;
+
+	}
 }

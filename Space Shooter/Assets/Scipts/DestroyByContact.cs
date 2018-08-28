@@ -7,6 +7,7 @@ public class DestroyByContact : MonoBehaviour
     public GameObject playerExplosion;
     public int scoreValue;
     private GameController gameController;
+	public int shipsRemaining;
     
 void Start () {
     GameObject gameControllerObject = GameObject.FindWithTag ("GameController");
@@ -26,14 +27,18 @@ Debug.Log ("Cannot find 'GameController' script");
             return;
         }
         Instantiate(explosion, transform.position, transform.rotation);
+		Destroy(other.gameObject);
+		Destroy(gameObject);
         if (other.tag == "Player")
         {
             Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
             
-            gameController.GameOver ();
+			Debug.Log (gameController.shipsRemaining ());
+			if (gameController.shipsRemaining () <= 1) {
+				gameController.GameOver ();
+			}
         }
         gameController.AddScore (scoreValue);
-        Destroy(other.gameObject);
-        Destroy(gameObject);
+
     }
 }
