@@ -51,10 +51,11 @@ public class GameController : MonoBehaviour
                 Quaternion spawnRotation = Quaternion.identity;
                 Instantiate (hazard, spawnPosition, spawnRotation);
                 yield return new WaitForSeconds (spawnWait);
-
+                
 
             }
 			waveCount++;
+            hazardCount+=2;
 			waveCountText.text = "Waves Survived: " + waveCount;
             yield return new WaitForSeconds (waveWait);
 
