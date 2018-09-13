@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class WordGenerator : MonoBehaviour {
 
 		private static string[] wordList = { "mew",
 "welcome", "learned", "sort", "grab", "hug", "tramp", "learned", "comment", "sneak", "eye", "harmony", "collect", "watery", "crowd", "heavenly",
@@ -16,18 +16,18 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	public static string GetRandomWord () {
 		int randomIndex = Random.Range(0,wordList.Length);
+
 		string randomWord = wordList[randomIndex];
+
 		return randomWord;
 
 	}
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void Update()
+    {
+    }
+    public void Start()
+    {
+       
+    }
 }
