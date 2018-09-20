@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WordManager : MonoBehaviour {
+public class WordManagerold : MonoBehaviour {
 	public List<Word> words;
 
     private bool hasActiveWord;
@@ -16,10 +16,10 @@ public class WordManager : MonoBehaviour {
     }
 	public void AddWord () {
 
-        Word word = new Word(WordGenerator.GetRandomWord());
-		Debug.Log(word.word);
+        //Word word = new Word(WordGenerator.GetRandomWord());
+		//Debug.Log(word.word);
 
-        words.Add(word);
+        //words.Add(word);
 	}
 	
 	// Update is called once per frame

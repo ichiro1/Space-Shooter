@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WordGenerator : MonoBehaviour {
+public class WordGeneratorold : MonoBehaviour {
 
 		private static string[] wordList = { "mew",
 "welcome", "learned", "sort", "grab", "hug", "tramp", "learned", "comment", "sneak", "eye", "harmony", "collect", "watery", "crowd", "heavenly",
@@ -23,11 +23,4 @@ public class WordGenerator : MonoBehaviour {
 
 	}
 
-    public void Update()
-    {
-    }
-    public void Start()
-    {
-       
-    }
 }

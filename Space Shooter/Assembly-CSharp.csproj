@@ -69,11 +69,17 @@
     <Compile Include="Assets\Scipts\PlayerController.cs" />
     <Compile Include="Assets\Scipts\RandomRotator.cs" />
     <Compile Include="Assets\Scipts\shipsRemainingCheck.cs" />
-    <Compile Include="Assets\Scipts\Word.cs" />
-    <Compile Include="Assets\Scipts\WordGenerator.cs" />
-    <Compile Include="Assets\Scipts\WordManager.cs" />
+    <Compile Include="Assets\Scipts\WordGeneratorold.cs" />
+    <Compile Include="Assets\Scipts\WordManagerold.cs" />
+    <Compile Include="Assets\Scipts\Wordol.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Word.cs" />
+    <Compile Include="Assets\WordDisplay.cs" />
+    <Compile Include="Assets\WordGenerator.cs" />
     <Compile Include="Assets\WordInput.cs" />
+    <Compile Include="Assets\WordManager.cs" />
+    <Compile Include="Assets\WordSpawner.cs" />
+    <Compile Include="Assets\WordTimer.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/ucode/Downloads/Space-Shooter/Space Shooter/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
