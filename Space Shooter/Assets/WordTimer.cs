@@ -11,12 +11,12 @@ public class WordTimer : MonoBehaviour {
 
 	private void Update()
 	{
-		if (Time.time >= nextWordTime)
-		{
-			wordManager.AddWord();
-			nextWordTime = Time.time + wordDelay;
-			wordDelay *= .99f;
-		}
+		//if (Time.time >= nextWordTime)
+		//{
+			//wordManager.AddWord();
+			//nextWordTime = Time.time + wordDelay;
+			//wordDelay *= .99f;
+		//}
 	}
 
 }

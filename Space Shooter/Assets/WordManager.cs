@@ -11,6 +11,10 @@ public class WordManager : MonoBehaviour {
 	private bool hasActiveWord;
 	private Word activeWord;
 
+
+	public void Start() {
+		AddWord();
+	}
 	public void AddWord ()
 	{
 		Word word = new Word(WordGenerator.GetRandomWord(), wordSpawner.SpawnWord());
@@ -45,6 +49,7 @@ public class WordManager : MonoBehaviour {
 		{
 			hasActiveWord = false;
 			words.Remove(activeWord);
+			AddWord();
 		}
 	}
 

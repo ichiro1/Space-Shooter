@@ -9,13 +9,15 @@ public class GameController : MonoBehaviour
     public int hazardCount;
     public float spawnWait;
     public float startWait;
+
+    
     public float waveWait;
     
     public Text scoreText;
     public Text restartText;
     public Text gameOverText;
 	public Text waveCountText;
-
+    //public GameObject asteriod;
     private bool gameOver;
     private bool restart;
     private int score;
@@ -30,6 +32,9 @@ public class GameController : MonoBehaviour
         score = 0;
         UpdateScore ();
         StartCoroutine (SpawnWaves ());
+
+    
+   
     }
 
     void Update() {
@@ -55,9 +60,14 @@ public class GameController : MonoBehaviour
 
             }
 			waveCount++;
-            hazardCount+=2;
+            spawnWait += (float)0.1;
+
 			waveCountText.text = "Waves Survived: " + waveCount;
             yield return new WaitForSeconds (waveWait);
+            
+            //asteriod = GameObject.Find("Asteriod");
+            //Mover movescript = asteriod.GetComponent<Mover>();
+            //movescript.speed+= (float)0.2;
 
             if(gameOver) {
                 restartText.text = "Press 'R' to Restart";
