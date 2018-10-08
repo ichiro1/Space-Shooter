@@ -60,7 +60,7 @@ public class GameController : MonoBehaviour
 
             }
 			waveCount++;
-            spawnWait += (float)0.1;
+            spawnWait += (float)-0.1;
 
 			waveCountText.text = "Waves Survived: " + waveCount;
             yield return new WaitForSeconds (waveWait);

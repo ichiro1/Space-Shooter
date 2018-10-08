@@ -37,7 +37,7 @@ Debug.Log ("Cannot find 'GameController' script");
             Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
             
 			Debug.Log (gameController.shipsRemaining ());
-			if (gameController.shipsRemaining () <= 1) {
+			if (gameController.shipsRemaining () <= 9) {
 				gameController.GameOver ();
                 wordManager.words.Remove(activeWord);
 			}

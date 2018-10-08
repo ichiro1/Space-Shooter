@@ -10,10 +10,21 @@ public class WordManager : MonoBehaviour {
 
 	private bool hasActiveWord;
 	private Word activeWord;
+    public AudioSource audioSource;
+
+    
+    private float nextFire;
+    public float fireRate;
+    public GameObject shot;
+    public Transform shotSpawn;
+    private GameObject PlayerChild;
+
 
 
 	public void Start() {
 		AddWord();
+        audioSource.GetComponent<AudioSource>();
+        //PlayerChild = GetComponentInParent<Players>();
 	}
 	public void AddWord ()
 	{
@@ -50,7 +61,13 @@ public class WordManager : MonoBehaviour {
 			hasActiveWord = false;
 			words.Remove(activeWord);
 			AddWord();
-		}
+            nextFire = Time.time + fireRate;
+            Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+            audioSource.Play();
+            if (transform == null) {
+                Destroy(gameObject);
+            }
+        }
 	}
 
 }
